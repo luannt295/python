@@ -30,3 +30,5 @@ elif thang == 11:
     print('Tháng 11 có 30 ngày')
 elif thang == 12:
     print('Tháng 12 có 31 ngày')
+else:
+    print('Nhập sai')
