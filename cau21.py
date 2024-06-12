@@ -7,17 +7,19 @@
 # Nếu không đủ điều kiện học sinh khá ta xét nếu điểm trung bình lớn hơn hoặc bằng 5, toán hoặc văn lớn hơn hoặc bằng 5 và không có điểm nào dưới 3.5 thì in ra “Học sinh trung bình”
 # Nếu không đủ điều kiện học sinh trung bình ta xét nếu điểm trung bình lớn hơn hoặc bằng 3.5, toán hoặc văn lớn hơn hoặc bằng 3.5 và không có điểm nào dưới 2 thì in ra “Học sinh yếu”
 # Nếu không đủ điều kiện học sinh yếu ta in ra “Học sinh kém”
-toan = int(input('Điểm Toán: '))
-van = int(input('Điểm Văn: '))
-anh = int(input('Điểm Anh: '))
+toan = float(input('Điểm Toán: '))
+van = float(input('Điểm Văn: '))
+anh = float(input('Điểm Anh: '))
 
 diemtrungbinh = (toan + van + anh)/3
-if diemtrungbinh >= 8:
-    if toan >= 8 and anh >= 8:
-        if van >= 8:
+print('Điểm trung binh: ',diemtrungbinh)
+if diemtrungbinh >= 8 and toan >= 8 and van >= 8 and anh >= 6.5:
             print('Học Sinh Giỏi')
-        else:
-            print('Học Sinh khá')
-    else:
-        print('Học Sinh Khá')
-elif 
+elif diemtrungbinh >= 6.5 and toan >= 6.5 or van >=6.5 and anh >= 5:
+            print('Học Sinh Khá')
+elif diemtrungbinh >= 5 and toan >= 5 or van >=5 and anh >= 3.5:
+            print('Học Sinh Trung Bình')
+elif diemtrungbinh >= 3.5 and toan >= 3.5 or van >=3.5 and anh >= 2:
+            print('Học Sinh Yếu')
+else:
+      print('Học Sinh Kém')
